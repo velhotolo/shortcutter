@@ -5,6 +5,9 @@
 ![Status](https://img.shields.io/badge/Status-Ativo-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
+O Commit do dia 31/10/26 foi feito por engano porque eu uso vários terminais abertos pra abrir os arquivos pelo Micro. Os arquivos upados estão cheios de erros e a tela nem desenha como deveria, provavelmente por conta do arquivo do tema. Então é isso, não tem nada pra ver. 
+Eu tentaria reverter e/ou deletar, mas é tão burocrático que eu ganho mais estudando alguma coisa. Obrigado!
+
 Um aplicativo de desktop leve e direto ao ponto para salvar, organizar e consultar atalhos de teclado. Desenvolvido para manter as combinações de teclas mais importantes sempre à mão, otimizando o fluxo de trabalho sem a necessidade de recorrer a buscas na internet ou em manuais.
 
 ## ✨ Funcionalidades
