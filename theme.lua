@@ -2,46 +2,29 @@ local lwtk           = require("lwtk")
 local Color          = lwtk.Color
 local get            = lwtk.StyleRef.get
 
--- Palette: charcoal-blue background, parchment text, gold accent
-local BACKGROUND     = Color "1d2026" -- window
-local FIELD          = Color "272b33" -- text inputs
-local BUTTON         = Color "2f343d"
-local BUTTON_HOVER   = Color "3a404b" -- mouse over
-local BUTTON_PRESSED = Color "454c59" -- being clicked
-local TEXT           = Color "e6e1d6"
-local TEXT_DISABLED  = Color "6b717c" -- disabled button
-local BORDER         = Color "4a505c"
-local GOLD           = Color "d9a441" -- titles, focus, cursor
+local BACKGROUND     = Color "1e1e1e"
+local FIELD          = Color "252526"
+local BUTTON         = Color "333333"
+local BUTTON_HOVER   = Color "3e3e42"
+local BUTTON_PRESSED = Color "007acc"
+local TEXT           = Color "cccccc"
+local TEXT_DISABLED  = Color "6d6d6d"
+local BORDER         = Color "3f3f46"
+local ACCENT         = Color "007acc"
 
 return {
-    -- General: apply to every widget
     { "BackgroundColor",                            BACKGROUND },
     { "TextColor",                                  TEXT },
-    { "AccentColor",                                GOLD },
-    { "CursorColor",                                Color "00000000" }, -- cursor hidden without focus
-    { "CursorColor:focused",                        GOLD },
-    { "BorderColor@Box",                            GOLD },
-
-    -- Titles (TitleText) in gold
-    { "TextColor@TitleText",                        GOLD },
-
-
-    { "TextSize@TextLabel",                         14 },
-    { "TextColor@TextLabel",                        TEXT },
-    { "TextSize@TextValue",                         10 },
-    { "TextColor@TextValue",                        TEXT },
-
-
-
-
-
-    -- Text inputs
+    { "AccentColor",                                ACCENT },
+    { "CursorColor",                                Color "00000000" },
+    { "CursorColor:focused",                        ACCENT },
+    { "BorderColor@Box",                            BORDER },
+    { "TextColor@TitleText",                        ACCENT },
+    { "TextSize@FieldLabel",                        18 },
+    { "TextSize@FieldValue",                        14 },
     { "BackgroundColor@TextInput",                  FIELD },
     { "BorderColor@TextInput",                      BORDER },
     { "BorderColor@TextInput:focused",              get "AccentColor" },
-    { "TextSize@TextInput",                         18 },
-
-    -- Buttons, in each state
     { "BackgroundColor@PushButton",                 BUTTON },
     { "BackgroundColor@PushButton:hover",           BUTTON_HOVER },
     { "BackgroundColor@PushButton:pressed",         BUTTON_HOVER },
@@ -56,6 +39,4 @@ return {
     { "BorderColor@PushButton",                     BORDER },
     { "BorderColor@PushButton:focused",             get "AccentColor" },
     { "BorderColor@PushButton:default",             get "AccentColor" },
-
-
 }

@@ -26,13 +26,13 @@ function A.get_all()
     return apps
 end
 
-function A.create(name, commands, actions)
+function A.create(software, shortcut, actions)
     local stmt = db:prepare("INSERT INTO apps (name, commands, actions) VALUES (?, ?, ?)")
     if not stmt then
         return nil
     end
 
-    stmt:bind_values(name, commands, actions)
+    stmt:bind_values(software, shortcut, actions)
 
     local res = stmt:step()
     stmt:finalize()
@@ -63,4 +63,4 @@ function A.delete(id)
     return res == sqlite3.DONE and db:changes() > 0
 end
 
-return database
+return A
